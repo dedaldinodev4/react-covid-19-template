@@ -11,7 +11,7 @@ import Home from './pages/Home'
         <div>
           <GlobalStyle />
           <Home />
-          <h1>Hello Covid-19</h1>
+          {/* <h1>Hello Covid-19</h1> */}
         </div>
       </ThemeProvider>
      );
