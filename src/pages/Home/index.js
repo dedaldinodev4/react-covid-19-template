@@ -12,7 +12,11 @@ const Home = () => {
     return (
         <>
             <Header />
-            <Intro imagem={'bgHome'} />
+            <Intro 
+                image={'bgHome'}
+                title={'Covid-19'}
+                btn={true}
+            />
             <Prevention />
             <AboutUs />
             <Contact />

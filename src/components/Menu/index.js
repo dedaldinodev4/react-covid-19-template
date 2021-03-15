@@ -8,33 +8,33 @@ const Navbar = () => {
         <Nav>
             <ul className="list-group">
                 <li className="list-group-item">
-                    {/* <Link to="/"> */}
-                    <a hre="#home" id="#home">
+                <Link to="/">
+                    <a hre="#home" id="home">
                         Home
                     </a>
-                    {/* </Link> */}
+                </Link>
                 </li>
                 <li className="list-group-item">
-                    {/* <Link to="/infection"> */}
-                    <a hre="infections" id="#infections">
-                        Infections
-                    </a>
-                    {/* </Link> */}
+                    <Link to="/infection">
+                        <a id="infection">
+                            Infections
+                        </a>
+                    </Link>
                 </li>
                 <li className="list-group-item">
-                    {/* <Link to="/dash" > */}
-                    <a hre="#dash" id="#dash">
-                        Corona Dash
-                    </a>
-                    {/* </Link> */}
+                    <Link to="/dash" >
+                        <a id="dash">
+                            Corona Dash
+                        </a>
+                    </Link>
                     
                 </li>
                 <li className="list-group-item">
-                    {/* <Link to="/about"> */}
-                    <a hre="#about" id="#about">
+                    <Link to="/about">
+                        <a id="#about">
                         About
-                    </a>
-                    {/* </Link> */}
+                        </a>
+                    </Link>
                 </li>
             </ul>
         </Nav>

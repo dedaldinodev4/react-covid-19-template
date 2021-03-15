@@ -20,7 +20,7 @@ background-color: none;
         color: ${props =>  props.theme.colors.primary};
 
         &:hover {
-            color: ${props =>  props.theme.colors.secundary};
+            color: ${props =>  props.theme.colors.hover};
         }
     }
 `;

@@ -1,15 +1,18 @@
 import React from 'react';
-import {Container, Section} from './styled';
+import { Section } from './styled';
 
 
 const Footer = () => {
 
+    const year = new Date().getFullYear();
+
     return (
         <>
             <Section>
-                <Container className="container">
-                    <h3>Footer</h3>
-                </Container>
+                <a href="#">
+                © {year} <span>Code Ink </span>  All right reserved.
+                </a>
+
             </Section>
         </>
 

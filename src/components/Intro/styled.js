@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Cover = styled.div`
     position: relative;
-    background: url('./assets/images/${props => props.imagem}.jpg') no-repeat scroll center center;
+    background: url('./assets/images/${props => props.image}.jpg') no-repeat scroll center center;
     background-size: cover;
     display: block;
     width: 100%;

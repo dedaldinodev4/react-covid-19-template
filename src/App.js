@@ -2,17 +2,16 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import light from './components/infra/light';
 import GlobalStyle from './components/styles/global';
-import Home from './pages/Home'
+import Routes from './routes';
 
   const App = () => {
  
     return (
       <ThemeProvider theme = {light} >
-        <div>
+        <React.Fragment>
           <GlobalStyle />
-          <Home />
-          {/* <h1>Hello Covid-19</h1> */}
-        </div>
+          <Routes />
+        </React.Fragment>
       </ThemeProvider>
      );
   

@@ -2,7 +2,7 @@
  * @author Dedaldino Daniel
  * @package Covid-19 - Theme Dark
  * @license MIT
- * @version 0.0.1
+ * @version 1.0.0
  */
 
 const dark = {
