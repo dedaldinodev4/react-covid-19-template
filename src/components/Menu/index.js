@@ -2,7 +2,7 @@ import React from 'react';
 import {Nav} from './styled';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     return (
         <Nav>
@@ -10,29 +10,36 @@ const Navbar = () => {
                 <li className="list-group-item">
                 <Link to="/">
                     <a hre="#home" id="home">
-                        Home
+                        {props.main[0]}
                     </a>
                 </Link>
                 </li>
                 <li className="list-group-item">
                     <Link to="/infection">
                         <a id="infection">
-                            Infections
+                            {props.main[1]}
                         </a>
                     </Link>
                 </li>
                 <li className="list-group-item">
                     <Link to="/dash" >
                         <a id="dash">
-                            Corona Dash
+                            {props.main[2]}
                         </a>
                     </Link>
                     
                 </li>
                 <li className="list-group-item">
                     <Link to="/about">
-                        <a id="#about">
-                        About
+                        <a id="about">
+                            {props.main[3]}
+                        </a>
+                    </Link>
+                </li>
+                <li className="list-group-item">
+                    <Link to="/contact">
+                        <a id="contact">
+                            {props.main[4]}
                         </a>
                     </Link>
                 </li>

@@ -14,8 +14,13 @@
 
     body {
         font-family: Roboto;
-        background: ${props => props.theme.colors.bg_primary};
+        background: ${props =>  props.theme.colors.hover};
         margin: 0;
+    }
+
+    html, body, ul, ol, li, form, fieldset, legend {
+        margin: 0;
+        padding: 0;
     }
 
     .container {

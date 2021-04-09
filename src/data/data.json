@@ -1,0 +1,112 @@
+{
+    "Header": {
+        "menu": [
+            "Home",
+            "Infections",
+            "Corona Dash",
+            "About",
+            "Contact"
+        ]
+    }, 
+    
+    "Intro": {
+        "title": "Coronavirus",
+        "subtitle": "Pandemic",
+        "home": {
+            "image": "bgHome",
+            "title": "Covid-19",
+            "btn": true
+        },
+        "infection": {
+            "image": "bgInfections",
+            "title": "Infections",
+            "btn": false
+        },
+        "dash": {
+            "image": "bgDash",
+            "title": "Corona Dash",
+            "btn": false
+        },
+        "about": {
+            "image": "bgAbout",
+            "title": "About Us",
+            "btn": false
+        },
+        "contact": {
+            "image": "bgContact",
+            "title": "Contact Us",
+            "btn": false
+        }
+    },
+
+    "Prevention": {
+        "title": "Preventions",
+        "paragraph": [
+            "Our preventions on   coronavirus", "Cases and death great everday someplace."
+        ],
+        "Item": [
+            {
+                "image": "./assets/images/icons/Hands-Icon.png",
+                "name": "Wash Hands",
+                "paragraph": [
+                    "wash your Hands", "all time of day for there is life", "You will do all days always of course."
+                ] 
+            },
+            {
+                "image": "./assets/images/icons/Mask-Icon.png",
+                "name": "Use Mask",
+                "paragraph": [
+                    "wash your Hands", "all time of day for there is life", "You will do all days always of course."
+                ] 
+            },
+            {
+                "image": "./assets/images/icons/Distance-Icon.png",
+                "name": "Social Distance",
+                "paragraph": [
+                    "wash your Hands", "all time of day for there is life", "You will do all days always of course."
+                ] 
+            }
+
+        ]
+    },
+    "About": {
+        "title": "About Us",
+        "paragraph": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "Contact": {
+        "touch": {
+            "title": "Get In Touch"
+        },
+        "social": {
+            "title": "Social Medias",
+            "icons": {
+                "facebook": {
+                    "icon": "./assets/images/icons/facebook.png",
+                    "name": "facebook/covid-pandemic19"
+                },
+                "instagram": {
+                    "icon": "./assets/images/icons/instagram.png",
+                    "name": "@covid_pandemic19angolan"
+                },
+                "twitter": {
+                    "icon": "./assets/images/icons/twitter.png",
+                    "name": "@pandemic_covid19"
+                },
+                "google": {
+                    "icon": "./assets/images/icons/google.png",
+                    "name": "covid-pandemic19"
+                }
+
+            }
+        }
+    },
+    "Footer": {
+        "company": "Code Ink",
+        "copyright": "All right reserved."
+    },
+    "WideData": {
+        "title": "Wide world Data",
+        "paragraph": ["Our preventions on coronavirus","Cases & death great everday someplace"]
+    }
+
+}

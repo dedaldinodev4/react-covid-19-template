@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 const Section = styled.div`
     padding: 8rem 0;
+   
+   .container {
+       p {
+        color: ${props =>  props.theme.colors.secundary};
+       }
+   }
 `;
 
 const Content = styled.div`
@@ -26,6 +32,10 @@ const Item = styled.div`
         font-size: 20px;
         margin: 10px 0;
         font-weight: 600;
+    }
+
+    p {
+        color: ${props =>  props.theme.colors.secundary};
     }
 `;
 

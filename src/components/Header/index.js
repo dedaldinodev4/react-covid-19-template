@@ -2,11 +2,11 @@ import React from 'react';
 import {Wrapper} from './styled';
 import Navbar from '../Menu/';
 
-const Header = () => {
+const Header = (props) => {
 
     return(
         <Wrapper>
-            <Navbar />
+            <Navbar main = {props.main.menu}/>
         </Wrapper>
     );
 }

@@ -22,14 +22,16 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-    width: 80%;
+    width: 60%;
     margin: 1em 10px;
     background: none;
     border: 1px solid ${props =>  props.theme.colors.primary};
+    border-radius: 20px;
     padding: 10px;
     font-family: Roboto;
-    font-weight: 400;
-    color: ${props =>  props.theme.colors.primary};
+    font-weight: 300;
+    color: ${props =>  props.theme.colors.secundary};
+    text-align: center;
 
     &:focus {
         border: none;
@@ -38,24 +40,29 @@ const Input = styled.input`
     }
 
     &::placeholder {
-        color: ${props =>  props.theme.colors.primary};
+        color: ${props =>  props.theme.colors.info};
     }
 `;
 
 const TxtArea = styled.textarea`
-    width: 80%;
+    width: 60%;
     margin: 1em 10px;
     background: none;
     border: 1px solid ${props =>  props.theme.colors.primary};
+    border-radius: 20px;
     padding: 10px;
     font-family: Roboto;
     font-weight: 400;
-    color: ${props =>  props.theme.colors.primary};
+    color: ${props =>  props.theme.colors.secundary};
 
     &:focus {
         border: none;
         outline: none;
         border: 2px solid ${props =>  props.theme.colors.primary};
+    }
+
+    &::placeholder {
+        color: ${props =>  props.theme.colors.info};
     }
 `;
 
@@ -65,8 +72,8 @@ const Icons = styled.div`
 
     h4 {
         margin: 0 40px;
-        font-size: 20px;
-        color: ${props =>  props.theme.colors.info};
+        font-size: 16px;
+        color: ${props =>  props.theme.colors.secundary};
     }
 
     img {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const Cover = styled.div`
-    position: relative;
+    height: 100%;
     background: url('./assets/images/${props => props.image}.jpg') no-repeat scroll center center;
     background-size: cover;
     display: block;
@@ -10,7 +10,7 @@ const Cover = styled.div`
     min-height: 800px;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
+    overflow-y: hidden; 
 `;
 
 const Text = styled.div`
@@ -22,12 +22,13 @@ const Text = styled.div`
     top: 40%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
+    font-family: "Roboto";
 
     h1 {
         color: ${props =>  props.theme.colors.secundary};
         margin: 0;
         font-size: 70px;
-        letter-spaciong: -3px;
+        letter-spacing: -3px;
     }
 
     h3 {
@@ -41,28 +42,23 @@ const BtnStart = styled.a`
     position: relative;
     margin: 20px 10px;
     padding: 15px 20px;
-    background: ${props => props.theme.colors.secundary};
+    background: none;
     font-family: Roboto;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secundary};
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 13px;
     text-transform: uppercase;
     cursor: pointer;
+    border: 1px solid ${props => props.theme.colors.secundary};
     border-radius: 4px;
     bottom: -30px;
 
-    img {
-        width:  15px;
-        height: 16px;
-        vertical-align: center;
-        margin: -2px 3px; 
-    }
-
     &:hover {
         background: ${props => props.theme.colors.primary};
-        color: ${props =>  props.theme.colors.secundary};
+        border: none;
     }
+
 `;
 
 const Container = styled.div`

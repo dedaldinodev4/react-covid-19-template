@@ -2,7 +2,7 @@ import React from 'react';
 import { Section } from './styled';
 
 
-const Footer = () => {
+const Footer = (props) => {
 
     const year = new Date().getFullYear();
 
@@ -10,7 +10,7 @@ const Footer = () => {
         <>
             <Section>
                 <a href="#">
-                © {year} <span>Code Ink </span>  All right reserved.
+                © {year} <span>{props.data.company} </span>  {props.data.copyright}
                 </a>
 
             </Section>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Container, BtnPrimary} from '../styles/';
+import { Container, BtnPrimary} from '../styles';
 import { Section, Content, Form, Input, TxtArea, Icons} from './styled';
 
 
 
-const Contact = () => {
+const ContactUs = (props) => {
 
     return (
         <React.Fragment>
@@ -13,7 +13,7 @@ const Contact = () => {
                 <Container className="container">
                     <Content className="contact-content">
                         <div className="touch">
-                            <h3>Get In Touch</h3>
+                            <h3>{props.data.touch.title}</h3>
                             <Form>
                                 <Input 
                                     type="text"
@@ -43,22 +43,22 @@ const Contact = () => {
                         </div>
 
                         <div>
-                            <h3>Social Medias</h3><br/>
+                            <h3>{props.data.social.title}</h3><br/>
                             <Icons>
-                                <img src="./assets/images/icons/facebook.png" alt="facebook"/>
-                                <h4>facebook/covid-pandemic19</h4>
+                                <img src={props.data.social.icons.facebook.icon} alt="facebook"/>
+                                <h4>{props.data.social.icons.facebook.name}</h4>
                             </Icons>
                             <Icons>
-                                <img src="./assets/images/icons/instagram.png" alt="instagram"/>
-                                <h4>@covid_pandemic19angolan</h4>
+                                <img src={props.data.social.icons.instagram.icon}alt="instagram"/>
+                                <h4>{props.data.social.icons.instagram.name}</h4>
                             </Icons>
                             <Icons>
-                                <img src="./assets/images/icons/twitter.png" alt="twitter"/>
-                                <h4>@pandemic_covid19</h4>
+                                <img src={props.data.social.icons.twitter.icon} alt="twitter"/>
+                                <h4>{props.data.social.icons.twitter.name}</h4>
                             </Icons>
                             <Icons>
-                                <img src="./assets/images/icons/google.png" alt="google"/>
-                                <h4>covid-pandemic19</h4>
+                                <img src={props.data.social.icons.google.icon} alt="google"/>
+                                <h4>{props.data.social.icons.google.name}</h4>
                             </Icons>
                         </div>
                     </Content>
@@ -70,4 +70,4 @@ const Contact = () => {
 };
 
 
-export default Contact;
+export default ContactUs;
