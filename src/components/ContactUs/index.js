@@ -1,8 +1,22 @@
 import React from 'react';
 
-import { Container, BtnPrimary} from '../styles';
-import { Section, Content, Form, Input, TxtArea, Icons} from './styled';
+import { Container, 
+        Form, 
+        Input, TxtArea, 
+        Icons} from '../styles';
+import { Section, Content} from './styled';
+import { motion } from 'framer-motion';
 
+const btnVariants = {
+    hover: { 
+        scale: 1.1,
+        boxShadow: "0px 0px 8px rgb(241,14,70)",
+        transition: {
+            duration: 0.3,
+            yoyo: Infinity
+        }
+    }
+}
 
 
 const ContactUs = (props) => {
@@ -35,10 +49,12 @@ const ContactUs = (props) => {
                                 placeholder="Your Message"
                                 ></TxtArea><br/><br />
 
-                               
-                                
-                            
-                                <BtnPrimary>Send Message</BtnPrimary>
+                                <motion.button className="btnPrimary"
+                                    variants={btnVariants}
+                                    whileHover="hover"
+                                >
+                                    Send Message
+                                </motion.button>
                             </Form>
                         </div>
 

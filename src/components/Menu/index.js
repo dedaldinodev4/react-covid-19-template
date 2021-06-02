@@ -9,21 +9,21 @@ const Navbar = (props) => {
             <ul className="list-group">
                 <li className="list-group-item">
                 <Link to="/">
-                    <a hre="#home" id="home">
+                    <a href="#home" id="home">
                         {props.main[0]}
                     </a>
                 </Link>
                 </li>
                 <li className="list-group-item">
                     <Link to="/infection">
-                        <a id="infection">
+                        <a href="#infection" id="infection">
                             {props.main[1]}
                         </a>
                     </Link>
                 </li>
                 <li className="list-group-item">
-                    <Link to="/dash" >
-                        <a id="dash">
+                    <Link to="/dash">
+                        <a href="#dash" id="dash">
                             {props.main[2]}
                         </a>
                     </Link>
@@ -31,14 +31,14 @@ const Navbar = (props) => {
                 </li>
                 <li className="list-group-item">
                     <Link to="/about">
-                        <a id="about">
+                        <a href="#about" id="about">
                             {props.main[3]}
                         </a>
                     </Link>
                 </li>
                 <li className="list-group-item">
                     <Link to="/contact">
-                        <a id="contact">
+                        <a href="#contact" id="contact">
                             {props.main[4]}
                         </a>
                     </Link>

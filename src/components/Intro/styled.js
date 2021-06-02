@@ -38,32 +38,27 @@ const Text = styled.div`
     }
 `;
 
-const BtnStart = styled.a`
-    position: relative;
-    margin: 20px 10px;
-    padding: 15px 20px;
-    background: none;
-    font-family: Roboto;
-    color: ${props => props.theme.colors.secundary};
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 13px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 1px solid ${props => props.theme.colors.secundary};
-    border-radius: 4px;
-    bottom: -30px;
-
-    &:hover {
-        background: ${props => props.theme.colors.primary};
-        border: none;
-    }
-
-`;
 
 const Container = styled.div`
     margin-top: 34vh;
+
+    .btnStart {
+        position: relative;
+        margin: 20px 10px;
+        padding: 15px 20px;
+        background: ${props => props.theme.colors.primary};
+        font-family: Roboto;
+        color: ${props => props.theme.colors.secundary};
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        bottom: -30px;
+    }
 `;
 
 
-export { Cover, Container, Text, BtnStart};
+export { Cover, Container, Text};

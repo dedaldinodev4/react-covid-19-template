@@ -12,8 +12,9 @@ const AboutContent = styled.div`
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
 
-    div img {
-        width: 600px;
+    img {
+        margin: 20px 0;
+        width: 100%;
     }
 `;
 

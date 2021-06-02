@@ -9,7 +9,7 @@ const Footer = (props) => {
     return (
         <>
             <Section>
-                <a href="#">
+                <a href="codeinkcompany.co.ao">
                 © {year} <span>{props.data.company} </span>  {props.data.copyright}
                 </a>
 

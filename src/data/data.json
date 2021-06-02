@@ -106,7 +106,28 @@
     },
     "WideData": {
         "title": "Wide world Data",
+        "paragraph": ["Our preventions on coronavirus","Cases & death great everday someplace"],
+        "colors": [
+            "#f5b8b8", "#f10e46", "#2ecc71", "#ff9016"
+        ]
+    },
+    "Chart": {
+        "title": "Graphs",
         "paragraph": ["Our preventions on coronavirus","Cases & death great everday someplace"]
+    },
+    "Whom": {
+        "mission": {
+            "title": "Mission",
+            "paragraph":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        "plan": {
+            "title": "Plan",
+            "paragraph":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        },
+        "vision": {
+            "title": "Vision",
+            "paragraph":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        }
     }
 
 }

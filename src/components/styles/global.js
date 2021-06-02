@@ -140,7 +140,7 @@
         }
     }
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 768px) {
     
         .contact-content {
             display: grid;
@@ -149,7 +149,43 @@
             text-align: left;
         }
     }
+
+    /* loader */
+    .loader {
+        width: 10px;
+        height: 10px;
+        margin: 40px auto;
+        border-radius: 50%;
+        background: ${props => props.theme.colors.primary};
+    }
     
+    /* btn primary */
+    .btnPrimary {
+        position: relative;
+        margin: 20px 10px;
+        padding: 10px 25px;
+        background: ${props => props.theme.colors.primary};
+        font-family: Roboto;
+        color: ${props => props.theme.colors.secundary};
+        letter-spacing: 2px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .label {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .info-contents {
+        margin: 50px 0;
+        width: 500px;
+    }
     
     
  `;
