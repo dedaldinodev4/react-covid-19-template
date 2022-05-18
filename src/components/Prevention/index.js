@@ -1,19 +1,9 @@
 import React from 'react';
-
 import { Container } from '../styles/';
 import { Section, Content, Item } from './styled';
 import { motion } from 'framer-motion';
+import { btnVariants } from '../../utils/motionAnimate';
 
-const btnVariants = {
-    hover: { 
-        scale: 1.1,
-        boxShadow: "0px 0px 8px rgb(241,14,70)",
-        transition: {
-            duration: 0.3,
-            yoyo: Infinity
-        }
-    }
-}
 
 const Prevention = (props) => {
 

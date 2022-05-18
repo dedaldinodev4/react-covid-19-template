@@ -1,12 +1,12 @@
 {
     "Header": {
-        "menu": [
-            "Home",
-            "Infections",
-            "Corona Dash",
-            "About",
-            "Contact"
-        ]
+        "menu": {
+            "home": "Home",
+            "infection": "Infections",
+            "dash": "Corona Dash", 
+            "about": "About Us",
+            "contact": "Contact Us"
+        }
     }, 
     
     "Intro": {

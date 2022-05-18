@@ -1,13 +1,10 @@
 import React from 'react';
-import {Wrapper} from './styled';
-import Navbar from '../Menu/';
+import Navbar from './partials/navbar'
 
 const Header = (props) => {
 
     return(
-        <Wrapper>
-            <Navbar main = {props.main.menu}/>
-        </Wrapper>
+        <Navbar items = {props.items}/>
     );
 }
 

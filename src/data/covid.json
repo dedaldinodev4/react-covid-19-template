@@ -1,0 +1,18 @@
+{
+    "angola": {
+        "atives": "98.698",
+        "deaths": "1.899",
+        "recovereds": "96.631",
+        "asymptomatics": "1.148",
+        "symptomatics": "22",
+        "world_total": "670.155.054"
+    },
+
+    "world": {
+        "atives": "270155054",
+        "deaths": "6.305.991",
+        "recovereds": "96631",
+        "asymptomatics": "1148",
+        "symptomatics": "22"
+    }
+}

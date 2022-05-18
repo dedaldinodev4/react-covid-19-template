@@ -1,30 +1,13 @@
 import React, {useState, useEffect} from 'react';
-
-import Header from '../../components/Header';
 import Intro from '../../components/Intro';
 import ContactUs from '../../components/ContactUs'; 
 import Footer from '../../components/Footer';
 import Whom from '../../components/Whom';
-import {DataContext} from '../../App';
-import {motion} from 'framer-motion';
+import {DataContext} from '../../context/dataContext';
 import Loader from '../../components/Loader';
+import {motion} from 'framer-motion';
+import { LayoutVariants } from '../../utils/motionAnimate';
 
-
-const aboutVariants = {
-    hidden: {
-        opacity: 0,
-        x: '100vw'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            durantion: 0.5,
-            delay: 0.5
-        }
-    },
- 
-};
 
 const About = () => {
     const [isDoneLoader, setIsDoneLoader] = useState(true);
@@ -41,7 +24,7 @@ const About = () => {
                 isDoneLoader ? 
                 <Loader />                 
                 :<motion.div className="about"
-                    variants={aboutVariants}
+                    variants={LayoutVariants}
                     exit = "hidden"
                 >
                     <DataContext.Consumer>
@@ -49,8 +32,7 @@ const About = () => {
                             data => {
                                 return (
                                     <div>
-                                        <Header main = {data.Header} />
-                                        <Intro data={data.Intro.about} />
+                                        <Intro main={data.Header} data={data.Intro.about} />
                                         <Whom data={data.Whom} />
                                         <ContactUs data={data.Contact}/>
                                         <Footer data={data.Footer}/>

@@ -1,17 +1,17 @@
-import React, {createContext} from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import light from './components/infra/light';
 import GlobalStyle from './components/styles/global';
 import Routes from './routes';
 import JsonData from './data/data.json';
+import { DataContext } from './context/dataContext';
 
 
-export const DataContext = createContext();
 
 const App = () => {
   
     return (
-      <ThemeProvider theme = {light} >
+      <ThemeProvider theme = {light}>
         <React.Fragment>
           <GlobalStyle />
           <DataContext.Provider value={JsonData}>

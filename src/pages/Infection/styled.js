@@ -43,6 +43,11 @@ const Box = styled.div`
         text-transform: uppercase;
         color: ${props => props.theme.colors.secundary};
 
+        span {
+            float: right;
+            text-align: right;
+            margin: 0 10px;
+        }
         
     }
     

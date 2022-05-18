@@ -14,8 +14,6 @@ const dark = {
         bg_secundary: '#282627',
         font: '#fff'
     }
-
-
- }
+}
 
  export default dark;

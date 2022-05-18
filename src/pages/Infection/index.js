@@ -1,48 +1,22 @@
 import React, {useState, useEffect} from 'react';
 
-import Header from '../../components/Header';
+
 import Intro from '../../components/Intro';
 import {Container, Section, InputRadio} from '../../components/styles';
 import {Item, Box, BoxDefault} from './styled';
 import ContactUs from '../../components/ContactUs';
 import Footer from '../../components/Footer';
-import {DataContext} from '../../App';
+import {DataContext} from '../../context/dataContext';
+import covid from '../../data/covid.json'
 import Loader from '../../components/Loader';
+import { colors } from '../../components/infra/colors';
 import {motion} from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAfrica,
         faHeartBroken, 
         faStethoscope, 
         faChartBar, faVirus, faViruses } from '@fortawesome/free-solid-svg-icons';
-
-const infectionVariants = {
-    hidden: {
-        opacity: 0,
-        x: '100vw'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            durantion: 0.5,
-            delay: 0.5
-        }
-    },
- 
-};
-
-const wideVariants = {
-    hidden: {
-        x: '-100vw'
-    },
-    visible: {
-        x: 0,
-        transition: {
-            type: 'spring',
-            stiffness: 120
-        }
-    }
-}
+import { LayoutVariants, wideVariants } from '../../utils/motionAnimate';
 
 
 const Infection = () => {
@@ -62,7 +36,7 @@ const Infection = () => {
                     <Loader /> :
 
                 <motion.div className="infection"
-                    variants={infectionVariants}
+                    variants={LayoutVariants}
                     exit="hidden"
                 >
                     <DataContext.Consumer>
@@ -70,8 +44,7 @@ const Infection = () => {
                             data => {
                                 return (
                                     <div>
-                                        <Header main= {data.Header}/>
-                                        <Intro data = {data.Intro.infection}/>
+                                        <Intro data = {data.Intro.infection} main={data.Header}/>
                                         <Section>
                                             <Container className="container">
                                                 <h2>{data.WideData.title}</h2>
@@ -97,32 +70,32 @@ const Infection = () => {
                                                 animate = "visible"
                                             >
                                                 <Item>
-                                                    <Box color={data.WideData.colors[0]}>
+                                                    <Box color={colors.pink}>
                                                         <h4><FontAwesomeIcon icon={faGlobeAfrica} />
                                                             &nbsp; &nbsp; Total World
-                                                            <span>509 950 124</span>
+                                                        <span>{covid.angola.world_total}</span>
                                                         </h4>
                                                     </Box>
-                                                    <Box color={data.WideData.colors[1]}>
+                                                    <Box color={colors.red}>
                                                         <h4>
                                                             <FontAwesomeIcon icon={faHeartBroken} />
                                                         &nbsp; &nbsp; Deaths
-                                                        <span>913 358</span>
+                                                        <span>{covid.angola.deaths}</span>
                                                         </h4>
                                                         
                                                     </Box>
-                                                    <Box color={data.WideData.colors[2]}>
+                                                    <Box color={colors.green}>
                                                         <h4>
                                                             <FontAwesomeIcon icon={faStethoscope} />
                                                             &nbsp; &nbsp; Recovered
-                                                            <span>421 767</span>
+                                                            <span>{covid.angola.recovereds}</span>
                                                         </h4>   
                                                     </Box>
-                                                    <Box color={data.WideData.colors[3]}>
+                                                    <Box color={colors.orange}>
                                                         <h4>
                                                             <FontAwesomeIcon icon={faChartBar} />
                                                             &nbsp; &nbsp; Actives
-                                                            <span>3 421 767</span>
+                                                            <span>{covid.angola.atives}</span>
                                                         </h4>
                                                     </Box>
 
@@ -130,7 +103,7 @@ const Infection = () => {
                                                         <h4>
                                                             <FontAwesomeIcon icon={faVirus} />
                                                             &nbsp; &nbsp; Asymptomatic
-                                                            <span>1 724</span>
+                                                            <span>{covid.angola.asymptomatics}</span>
                                                         </h4>
                                                     </BoxDefault>
 
@@ -138,7 +111,7 @@ const Infection = () => {
                                                         <h4>
                                                             <FontAwesomeIcon icon={faViruses} />
                                                             &nbsp; &nbsp; Symptomatic
-                                                            <span>370</span>
+                                                            <span>{covid.angola.symptomatics}</span>
                                                         </h4>
                                                     </BoxDefault>
                                                 </Item>

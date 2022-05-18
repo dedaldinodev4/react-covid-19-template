@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
 
+const Wrapper = styled.div`
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    z-index: 999;
+    background-color: transparent;
+`;
+
 const Cover = styled.div`
     height: 100%;
     background: url('./assets/images/${props => props.image}.jpg') no-repeat scroll center center;
@@ -19,10 +27,10 @@ const Text = styled.div`
     color: ${props =>  props.theme.colors.secundary};
     vertical-align: middle;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    font-family: "Roboto";
+    font-family: Roboto, sans-serif;
 
     h1 {
         color: ${props =>  props.theme.colors.secundary};
@@ -33,7 +41,7 @@ const Text = styled.div`
 
     h3 {
         color: ${props =>  props.theme.colors.secundary};
-        margin: 10px 0;
+        margin: 20px 0;
         font-size: 18px;
     }
 `;
@@ -61,4 +69,9 @@ const Container = styled.div`
 `;
 
 
-export { Cover, Container, Text};
+export { 
+    Cover, 
+    Container, 
+    Text,
+    Wrapper
+};

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 
-import Header from '../../components/Header';
 import Intro from '../../components/Intro';
 import Footer from '../../components/Footer';
 import {SectionDefault, Grid, Container
@@ -8,37 +7,10 @@ import {SectionDefault, Grid, Container
     ,Icons} from '../../components/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHome, faMailBulk, faPhoneSquare} from '@fortawesome/free-solid-svg-icons';
-import {DataContext} from '../../App';
+import {DataContext} from '../../context/dataContext';
 import Loader from '../../components/Loader';
 import {motion} from 'framer-motion';
-
-
-const contactVariants = {
-    hidden: {
-        opacity: 0,
-        x: '100vw'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            durantion: 0.5,
-            delay: 0.5
-        }
-    },
- 
-};
-
-const btnVariants = {
-    hover: { 
-        scale: 1.1,
-        boxShadow: "0px 0px 8px rgb(241,14,70)",
-        transition: {
-            duration: 0.3,
-            yoyo: Infinity
-        }
-    }
-}
+import { btnVariants, LayoutVariants } from '../../utils/motionAnimate';
 
 const Contact = () => {
     const [isDoneLoader, setIsDoneLoader] = useState(true);
@@ -56,7 +28,7 @@ const Contact = () => {
                 isDoneLoader ? <Loader />
                 :
                 <motion.div className="contact"
-                    variants={contactVariants}
+                    variants={LayoutVariants}
                     exit="hidden"
                 >
                     <DataContext.Consumer>
@@ -64,8 +36,7 @@ const Contact = () => {
                             data => {
                                 return (
                                         <div>
-                                            <Header main={data.Header} />
-                                            <Intro data={data.Intro.contact} />
+                                            <Intro main={data.Header}  data={data.Intro.contact} />
                                             <SectionDefault>
                                                 <Container className="container">
                                                     <Grid gridsize={2} text={"center"} className="contact-content">
